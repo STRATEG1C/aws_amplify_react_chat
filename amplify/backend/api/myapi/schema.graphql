@@ -1,0 +1,19 @@
+type ChatRoom @model {
+  id: ID
+  initiatorId: ID!
+  participantId: ID!
+}
+
+type Message @model {
+  id: ID
+  text: String!
+  chatRoomId: ID!
+  authorId: ID!
+  sendTime: AWSDateTime!
+}
+
+type User @model {
+  id: ID
+  cognitoID: String!
+  username: ID!
+}
